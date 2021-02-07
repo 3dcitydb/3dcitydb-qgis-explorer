@@ -41,3 +41,5 @@ pip-delete-this-directory.txt
 # Local files
 .env
 .vscode/
+Makefile
+setup.cfg
