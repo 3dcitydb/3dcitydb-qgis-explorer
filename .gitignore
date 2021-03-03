@@ -27,6 +27,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 .venv/
+Makefile
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
@@ -37,3 +38,7 @@ MANIFEST
 # Installer logs
 pip-log.txt
 pip-delete-this-directory.txt
+
+# Editor
+.vscode/
+.env
