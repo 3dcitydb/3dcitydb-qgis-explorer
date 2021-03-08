@@ -39,6 +39,8 @@ Makefile
 pip-log.txt
 pip-delete-this-directory.txt
 
-# Editor
-.vscode/
+# Local files
 .env
+.vscode/
+Makefile
+setup.cfg
