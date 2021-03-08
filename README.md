@@ -8,10 +8,6 @@ This plugin allows to load stored in a [3D CityDB](https://www.3dcitydb.org/3dci
 
 The plugin can be installed using the _Install from ZIP_ Function in the Plugins Window (_Plugins_>_Installs und manage plugins_).
 
-## How use the plugin
-
-After enabling the plugin, there will be a new entry in the "Database" Menu. Selecting this option will load a new dockwidget.
-
 ## 3DCityDB Explorer Widget
 
 - _Databases_: This is a list of the current PostgreSQL connection saved in QGIS.
