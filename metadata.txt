@@ -1,0 +1,16 @@
+[general]
+name=3DCityDB Explorer
+description=A plugin to explore data stored in a 3DCityDB Database.
+about=With this plugin is it possible to explore data stored inside a 3DCityDB.
+version=0.1.0
+qgisMinimumVersion=3.5
+author=M.O.S.S. Computer Grafik Systeme GmbH
+email=develop@moss.de
+experimental=True
+homepage=https://www.3dcitydb.org/3dcitydb/
+tracker=https://github.com/3dcitydb/3dcitydb-qgis-explorer
+repository=https://github.com/3dcitydb/3dcitydb-qgis-explorer
+deprecated=False
+icon=icon.png
+changelog=
+   0.1.0 First release. Currently only PostgreSQL and LOD2 are supported
