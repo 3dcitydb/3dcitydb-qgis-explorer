@@ -20,6 +20,14 @@ After enabling the plugin, there will be a new entry in the "Database" Menu. Sel
 - _Add buildings_: Add the Buildings for the current extent.
 - _Edit Attributes_: Start the edit modus. The mouse cursor wll change in a cross icon and with a click on building is is possible to edit its attributes. Clicking once again on this button will stop the edit modus.
 
+## How use this plugin
+
+1. Add a new PostgreSQL Database connection. This can be done, for example, in the _Data Source Manager_ under the _PostgreSQL_ block. Use the parameters of your 3DCityDB (hostname, port, user, etc..).
+2. Start the plugin Widget from the Database Menu (3DCityDB Explorer > Open Widget)
+3. Choose your 3DCityDB from the dropdown menu and click connect. If the connection is successful, you should see the version of the 3DCityDB.
+4. With the button _Add buildings_ the LOD2 (the current version of the plugin supports only LOD2) buildings can be loaded in QGIS. The max number of loaded features is controlled by the parameter _Max Features_.
+5. With the button _Edit Attributes_ ist it possible to edit the attributes of a specific geometry. Simply click on this button to activate the edit function and click on a geometry. A new Window will open with the current values of the selected geometry. Change the values and click _save_ to store the new values. To exit from the edit function, simply click once again on the _Edit Attributes_ button.
+
 ## License
 
 Copyright (C) 2021
