@@ -1,6 +1,6 @@
 # Description
 
-This plugin allows to load stored in a [3D CityDB](https://www.3dcitydb.org/3dcitydb/) in [QGIS](http://www.qgis.org). Is it possible to load the data in a 2D and 3D view.
+This plugin allows to load spatial data stored in a [3D CityDB](https://www.3dcitydb.org/3dcitydb/) in [QGIS](http://www.qgis.org). Is it possible to load the data in a 2D and 3D view.
 
 **Important notice**: this plugin is currently in the development phase. Only **PostgreSQL** is supported and currently only **LOD2** data can be loaded. Pull Requests are welcome!
 
@@ -10,11 +10,11 @@ The plugin can be installed using the _Install from ZIP_ Function in the Plugins
 
 ## 3DCityDB Explorer Widget
 
-- _Databases_: This is a list of the current PostgreSQL connection saved in QGIS.
-- _Connect_: Create a connection with the selected Database.
+- _Databases_: This is a list of the current PostgreSQL connections saved in QGIS.
+- _Connect_: Connect to the selected Database.
 - _Max Features_: The max number of features that will be loaded in QGIS. This is useful if requesting data for a big extent. This limit remains valid also when using zoom or pan function.
 - _Add buildings_: Add the Buildings for the current extent.
-- _Edit Attributes_: Start the edit modus. The mouse cursor wll change in a cross icon and with a click on building is is possible to edit its attributes. Clicking once again on this button will stop the edit modus.
+- _Edit Attributes_: Start the edit mode. The mouse cursor will change to a cross icon and with a click on building it is possible to edit its attributes. Clicking once again on this button will stop the edit mode.
 
 ## How use this plugin
 
