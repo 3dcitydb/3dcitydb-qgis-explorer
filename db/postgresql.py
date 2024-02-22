@@ -24,7 +24,7 @@
 # M.O.S.S. Computer Grafik Systeme GmbH, Taufkirchen <http://www.moss.de/>
 #
 #####################################################################################
-
+import warnings
 from psycopg2 import Error, InterfaceError, OperationalError, connect
 
 
@@ -129,18 +129,31 @@ class PostgreSQLInterface:
         Return
         """
 
-        SQL = """
+        SQLv4 = """
+            SELECT version FROM citydb_pkg.citydb_version()
+        """
+
+        SQLv3 = """
             SELECT citydb_version()
         """
 
         with self.connection.cursor() as cursor:
             try:
-                cursor.execute(SQL)
+                cursor.execute(SQLv4)
             except (Error, OperationalError):
-                return -1
+                self.connection.rollback()
+                try:
+                    cursor.execute(SQLv3)
+                except (Error, OperationalError):
+                    self.connection.rollback()
+                    warnings.warn("Error retrieving citydb version")
+                    return -1
+                else:
+                    (version,) = cursor.fetchone()
+                    return version.split(",")[0][1:]
             else:
-                (version,) = cursor.fetchone()
-                return version.split(",")[0][1:]
+                version = cursor.fetchone()
+                return version
 
     @property
     def srs(self) -> int:
@@ -156,6 +169,7 @@ class PostgreSQLInterface:
             try:
                 cursor.execute(SQL)
             except (Error, OperationalError):
+                self.connection.rollback()
                 raise PostgreSQLInterfaceException("Error getting SRS from Database")
             else:
                 srs = cursor.fetchone()
@@ -186,6 +200,7 @@ class PostgreSQLInterface:
             try:
                 cursor.execute(SQL)
             except (Error, OperationalError):
+                self.connection.rollback()
                 raise PostgreSQLInterfaceException(
                     "Error getting Exitmated extent from Database"
                 )

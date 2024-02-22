@@ -141,7 +141,7 @@ class CityDbExplorerDockWidget(QtWidgets.QDockWidget, FORM_CLASS):
 
             else:
                 # It is not a 3DCity DB. Reset the db_interface to None
-                self.dbVersion.setText("Error. Current DB is not a 3DCity DB.")
+                self.dbVersion.setText("Error. Current DB is not a 3DCity DB or is an unsupported version.") 
                 self.db_interface = None
 
     def load_building(self):
