@@ -1,3 +1,5 @@
+:information_source: 3dcitydb-qgis-explorer is in **archive mode** with no significant active development planned. We recommend using the [**3DCityDB Tools for QGIS**](https://github.com/tudelft3d/3DCityDB-Tools-for-QGIS) instead.
+
 # Description
 
 This plugin allows to load stored in a [3D CityDB](https://www.3dcitydb.org/3dcitydb/) in [QGIS](http://www.qgis.org). Is it possible to load the data in a 2D and 3D view.
